@@ -20,14 +20,6 @@ SQLAlchemy 1.4.25
 ```bash
 cd auth-python\src
 python webserver.py
-
-from datetime import datetime, timedelta
-from re import U
-from flask import Flask, request          
-from flask.helpers import make_response
-import jwt
-from sqlalchemy.orm import session
-import dbtable
 ```
 
 
