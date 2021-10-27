@@ -11,7 +11,7 @@ db = SQLAlchemy(app)
 engine = create_engine('postgresql://postgres:st0rmg0d@localhost/webserver') 
 
 class user(db.Model):          
-    __tablename__ = 'usser'
+    __tablename__ = 'user'
     usserid = db.Column('usserid', db.Integer, primary_key=True)   
     login = db.Column('login', db.Unicode)
     password = db.Column('password', db.Unicode)
