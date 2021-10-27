@@ -15,11 +15,11 @@ app.config['SECRET_KEY'] = 'flasksecretkey'
 def login():                               
     auth = request.authorization
     id = 5                         
-    tablecreating.Usser.tablefunc(id)
+    dbtable.user.tablefunc(id)
     if auth and auth.username == dbtable.loginn and auth.password == dbtable.passwordd: 
         login.token = jwt.encode({'user':auth.username, 'exp':datetime.utcnow() + timedelta(minutes=30)}, app.config['SECRET_KEY'])  
         
-        update_this =   dbtable.Usser.query.filter_by(usserid=id).first()  
+        update_this =   dbtable.user.query.filter_by(usserid=id).first()  
         update_this.token = '''{}'''.format(login.token)                            
         dbtable.db.session.commit()
         
