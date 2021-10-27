@@ -3,7 +3,7 @@
 ## Installation
 
 ```bash
-Flask==2.0.1
+Flask 2.0.1
 Flask-SQLAlchemy 2.5.1
 ipykernel 6.3.1
 ipython 7.27.0
