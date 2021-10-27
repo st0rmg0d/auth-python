@@ -6,14 +6,14 @@ from sqlalchemy import create_engine
 
 
 app = Flask(__name__)     
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:hashirama@localhost/ass6python'  
+app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:st0rmg0d@localhost/webserver'  
 db = SQLAlchemy(app)  
 
 
-engine = create_engine('postgresql://postgres:hashirama@localhost/ass6python') 
+engine = create_engine('postgresql://postgres:st0rmg0d@localhost/webserver') 
 
 
-class Usser(db.Model):          
+class user(db.Model):          
     __tablename__ = 'usser'
     usserid = db.Column('usserid', db.Integer, primary_key=True)   
     login = db.Column('login', db.Unicode)
@@ -28,8 +28,8 @@ class Usser(db.Model):
         self.token = token
 
 
-    loginn = ''     
-    passwordd = ''  
+    login = ''     
+    password = ''  
 
     def tablefunc(id):                       
         with engine.connect() as connection:
